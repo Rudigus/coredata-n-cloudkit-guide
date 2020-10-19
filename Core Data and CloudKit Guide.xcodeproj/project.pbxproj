@@ -16,6 +16,7 @@
 		57262EA9253DBE40000CAA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57262EA7253DBE40000CAA23 /* LaunchScreen.storyboard */; };
 		57262EB4253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57262EB3253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideTests.swift */; };
 		57262EBF253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57262EBE253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift */; };
+		57262EDC253DC690000CAA23 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57262EDB253DC690000CAA23 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		57262EBA253DBE40000CAA23 /* Core Data and CloudKit GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core Data and CloudKit GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57262EBE253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core_Data_and_CloudKit_GuideUITests.swift; sourceTree = "<group>"; };
 		57262EC0253DBE40000CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Core Data and CloudKit Guide.entitlements"; sourceTree = "<group>"; };
+		57262EDB253DC690000CAA23 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57262EDC253DC690000CAA23 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				57262EB2253DBE40000CAA23 /* Core Data and CloudKit GuideTests */,
 				57262EBD253DBE40000CAA23 /* Core Data and CloudKit GuideUITests */,
 				57262E97253DBE3D000CAA23 /* Products */,
+				57262EDA253DC690000CAA23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,7 @@
 		57262E98253DBE3D000CAA23 /* Core Data and CloudKit Guide */ = {
 			isa = PBXGroup;
 			children = (
+				57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */,
 				57262E99253DBE3D000CAA23 /* AppDelegate.swift */,
 				57262E9B253DBE3D000CAA23 /* SceneDelegate.swift */,
 				57262E9D253DBE3D000CAA23 /* ViewController.swift */,
@@ -129,6 +135,14 @@
 				57262EC0253DBE40000CAA23 /* Info.plist */,
 			);
 			path = "Core Data and CloudKit GuideUITests";
+			sourceTree = "<group>";
+		};
+		57262EDA253DC690000CAA23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57262EDB253DC690000CAA23 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Core Data and CloudKit Guide/Core Data and CloudKit Guide.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 828XYUZTZQ;
 				INFOPLIST_FILE = "Core Data and CloudKit Guide/Info.plist";
@@ -459,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Core Data and CloudKit Guide/Core Data and CloudKit Guide.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 828XYUZTZQ;
 				INFOPLIST_FILE = "Core Data and CloudKit Guide/Info.plist";
