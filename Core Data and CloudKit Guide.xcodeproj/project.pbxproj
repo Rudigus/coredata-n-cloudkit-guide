@@ -17,6 +17,10 @@
 		57262EB4253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57262EB3253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideTests.swift */; };
 		57262EBF253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57262EBE253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift */; };
 		57262EDC253DC690000CAA23 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57262EDB253DC690000CAA23 /* CloudKit.framework */; };
+		572A786D253F2B1E00C85FC2 /* Run+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7869253F2B1E00C85FC2 /* Run+CoreDataClass.swift */; };
+		572A786E253F2B1E00C85FC2 /* Run+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A786A253F2B1E00C85FC2 /* Run+CoreDataProperties.swift */; };
+		572A786F253F2B1E00C85FC2 /* Segment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A786B253F2B1E00C85FC2 /* Segment+CoreDataClass.swift */; };
+		572A7870253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A786C253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		57262EC0253DBE40000CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Core Data and CloudKit Guide.entitlements"; sourceTree = "<group>"; };
 		57262EDB253DC690000CAA23 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		572A7869253F2B1E00C85FC2 /* Run+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataClass.swift"; sourceTree = "<group>"; };
+		572A786A253F2B1E00C85FC2 /* Run+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		572A786B253F2B1E00C85FC2 /* Segment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		572A786C253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		57262E98253DBE3D000CAA23 /* Core Data and CloudKit Guide */ = {
 			isa = PBXGroup;
 			children = (
+				572A7874253F2B2500C85FC2 /* Model */,
 				57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */,
 				57262E99253DBE3D000CAA23 /* AppDelegate.swift */,
 				57262E9B253DBE3D000CAA23 /* SceneDelegate.swift */,
@@ -143,6 +152,17 @@
 				57262EDB253DC690000CAA23 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		572A7874253F2B2500C85FC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				572A7869253F2B1E00C85FC2 /* Run+CoreDataClass.swift */,
+				572A786A253F2B1E00C85FC2 /* Run+CoreDataProperties.swift */,
+				572A786B253F2B1E00C85FC2 /* Segment+CoreDataClass.swift */,
+				572A786C253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572A786F253F2B1E00C85FC2 /* Segment+CoreDataClass.swift in Sources */,
 				57262EA4253DBE3D000CAA23 /* Core_Data_and_CloudKit_Guide.xcdatamodeld in Sources */,
+				572A7870253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift in Sources */,
 				57262E9E253DBE3D000CAA23 /* ViewController.swift in Sources */,
+				572A786D253F2B1E00C85FC2 /* Run+CoreDataClass.swift in Sources */,
+				572A786E253F2B1E00C85FC2 /* Run+CoreDataProperties.swift in Sources */,
 				57262E9A253DBE3D000CAA23 /* AppDelegate.swift in Sources */,
 				57262E9C253DBE3D000CAA23 /* SceneDelegate.swift in Sources */,
 			);

@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Run" representedClassName="Run" syncable="YES">
+        <attribute name="attempts" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="gameName" optional="YES" attributeType="String"/>
+        <attribute name="personalBestTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="segments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Segment" inverseName="run" inverseEntity="Segment"/>
+    </entity>
+    <entity name="Segment" representedClassName="Segment" syncable="YES" codeGenerationType="class">
+        <attribute name="bestTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="run" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Run" inverseName="segments" inverseEntity="Run"/>
+    </entity>
+    <elements>
+        <element name="Run" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Segment" positionX="-54" positionY="18" width="128" height="88"/>
+    </elements>
 </model>
