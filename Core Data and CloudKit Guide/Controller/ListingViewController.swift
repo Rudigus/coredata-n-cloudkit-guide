@@ -11,27 +11,51 @@ class ListingViewController: UIViewController {
     
     var listingView: ListingView! = nil
     
+    var dataSource: [Run] = []
+    
+    let runCellReuseIdentifier = "RunTableViewCell"
+    
     override func loadView() {
-            listingView = ListingView()
-            view = listingView
-            listingView.backgroundColor = UIColor(red: 100 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1.0)
+        listingView = ListingView()
+        view = listingView
+        view.backgroundColor = UIColor.white
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupNavigationController()
+        setupTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupNavigationController() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
     }
-    */
+    
+    func setupTableView() {
+        listingView.runListing.register(RunTableViewCell.self, forCellReuseIdentifier: runCellReuseIdentifier)
+        listingView.runListing.dataSource = self
+        listingView.runListing.delegate = self
+    }
 
+    @objc func addButtonPressed() {
+        let vc = AddEditViewController()
+        vc.modalPresentationStyle = .pageSheet
+        navigationController?.present(vc, animated: true)
+    }
+    
+}
+
+extension ListingViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: runCellReuseIdentifier, for: indexPath) as! RunTableViewCell
+        let run = dataSource[indexPath.row]
+        cell.runLabel.text = "\(String(describing: run.gameName)) - \(String(describing: run.category))"
+        return cell
+    }
+    
+    
 }

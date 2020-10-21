@@ -22,6 +22,9 @@
 		572A788A253F2DC600C85FC2 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7889253F2DC600C85FC2 /* ListingViewController.swift */; };
 		572A7892253F2E1D00C85FC2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7891253F2E1D00C85FC2 /* DetailView.swift */; };
 		572A7897253F2E2800C85FC2 /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7896253F2E2800C85FC2 /* ListingView.swift */; };
+		573F54D2254065CC00470D24 /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F54D1254065CC00470D24 /* RunTableViewCell.swift */; };
+		573F54D72540714900470D24 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F54D62540714900470D24 /* AddEditViewController.swift */; };
+		573F54DC254071D700470D24 /* AddEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F54DB254071D700470D24 /* AddEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		572A7889253F2DC600C85FC2 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		572A7891253F2E1D00C85FC2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		572A7896253F2E2800C85FC2 /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
+		573F54D1254065CC00470D24 /* RunTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
+		573F54D62540714900470D24 /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		573F54DB254071D700470D24 /* AddEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +122,13 @@
 		57262E98253DBE3D000CAA23 /* Core Data and CloudKit Guide */ = {
 			isa = PBXGroup;
 			children = (
-				572A787D253F2C8600C85FC2 /* Services */,
 				572A7879253F2BA800C85FC2 /* Controller */,
 				572A7878253F2B9D00C85FC2 /* View */,
 				572A7874253F2B2500C85FC2 /* Model */,
 				57262EA5253DBE40000CAA23 /* Assets.xcassets */,
 				57262EAA253DBE40000CAA23 /* Info.plist */,
+				57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */,
+				57262EA2253DBE3D000CAA23 /* Core_Data_and_CloudKit_Guide.xcdatamodeld */,
 			);
 			path = "Core Data and CloudKit Guide";
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 			children = (
 				572A7891253F2E1D00C85FC2 /* DetailView.swift */,
 				572A7896253F2E2800C85FC2 /* ListingView.swift */,
+				573F54D1254065CC00470D24 /* RunTableViewCell.swift */,
+				573F54DB254071D700470D24 /* AddEditView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,17 +188,9 @@
 				57262E9B253DBE3D000CAA23 /* SceneDelegate.swift */,
 				57262E9D253DBE3D000CAA23 /* DetailViewController.swift */,
 				572A7889253F2DC600C85FC2 /* ListingViewController.swift */,
+				573F54D62540714900470D24 /* AddEditViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		572A787D253F2C8600C85FC2 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */,
-				57262EA2253DBE3D000CAA23 /* Core_Data_and_CloudKit_Guide.xcdatamodeld */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +327,12 @@
 				572A7892253F2E1D00C85FC2 /* DetailView.swift in Sources */,
 				572A7870253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift in Sources */,
 				57262E9E253DBE3D000CAA23 /* DetailViewController.swift in Sources */,
+				573F54DC254071D700470D24 /* AddEditView.swift in Sources */,
 				572A786D253F2B1E00C85FC2 /* Run+CoreDataClass.swift in Sources */,
 				572A786E253F2B1E00C85FC2 /* Run+CoreDataProperties.swift in Sources */,
+				573F54D72540714900470D24 /* AddEditViewController.swift in Sources */,
 				57262E9A253DBE3D000CAA23 /* AppDelegate.swift in Sources */,
+				573F54D2254065CC00470D24 /* RunTableViewCell.swift in Sources */,
 				572A7897253F2E2800C85FC2 /* ListingView.swift in Sources */,
 				57262E9C253DBE3D000CAA23 /* SceneDelegate.swift in Sources */,
 			);

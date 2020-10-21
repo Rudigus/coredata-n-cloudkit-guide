@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let listingVC = ListingViewController()
-        listingVC.title = "Pokebas"
+        listingVC.title = "Runs"
 
         let navigationController = UINavigationController(rootViewController: listingVC)
         navigationController.navigationBar.prefersLargeTitles = true

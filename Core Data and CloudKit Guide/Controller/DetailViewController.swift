@@ -12,9 +12,8 @@ class DetailViewController: UIViewController {
     var detailView: DetailView! = nil
     
     override func loadView() {
-            detailView = DetailView()
-            view = detailView
-            detailView.backgroundColor = UIColor(red: 245 / 255, green: 245 / 255, blue: 245 / 255, alpha: 1.0)
+        detailView = DetailView()
+        view = detailView
     }
 
     override func viewDidLoad() {

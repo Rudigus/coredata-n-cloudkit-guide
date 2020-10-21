@@ -9,12 +9,29 @@ import UIKit
 
 class ListingView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    let runListing: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupRunListing()
     }
-    */
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupRunListing() {
+        addSubview(runListing)
+        runListing.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            runListing.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            runListing.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            runListing.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            runListing.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
+    }
 
 }
