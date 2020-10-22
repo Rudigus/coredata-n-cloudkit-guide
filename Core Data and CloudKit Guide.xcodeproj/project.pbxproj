@@ -15,16 +15,17 @@
 		57262EB4253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57262EB3253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideTests.swift */; };
 		57262EBF253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57262EBE253DBE40000CAA23 /* Core_Data_and_CloudKit_GuideUITests.swift */; };
 		57262EDC253DC690000CAA23 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57262EDB253DC690000CAA23 /* CloudKit.framework */; };
-		572A786D253F2B1E00C85FC2 /* Run+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7869253F2B1E00C85FC2 /* Run+CoreDataClass.swift */; };
-		572A786E253F2B1E00C85FC2 /* Run+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A786A253F2B1E00C85FC2 /* Run+CoreDataProperties.swift */; };
-		572A786F253F2B1E00C85FC2 /* Segment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A786B253F2B1E00C85FC2 /* Segment+CoreDataClass.swift */; };
-		572A7870253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A786C253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift */; };
 		572A788A253F2DC600C85FC2 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7889253F2DC600C85FC2 /* ListingViewController.swift */; };
 		572A7892253F2E1D00C85FC2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7891253F2E1D00C85FC2 /* DetailView.swift */; };
 		572A7897253F2E2800C85FC2 /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A7896253F2E2800C85FC2 /* ListingView.swift */; };
 		573F54D2254065CC00470D24 /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F54D1254065CC00470D24 /* RunTableViewCell.swift */; };
 		573F54D72540714900470D24 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F54D62540714900470D24 /* AddEditViewController.swift */; };
 		573F54DC254071D700470D24 /* AddEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F54DB254071D700470D24 /* AddEditView.swift */; };
+		579E0B392541B69F002679BC /* Segment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E0B372541B69F002679BC /* Segment+CoreDataClass.swift */; };
+		579E0B3A2541B69F002679BC /* Segment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E0B382541B69F002679BC /* Segment+CoreDataProperties.swift */; };
+		57ED18822541AEF400151AC8 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED18812541AEF400151AC8 /* UITextField.swift */; };
+		57ED188F2541B37800151AC8 /* Run+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED188B2541B37800151AC8 /* Run+CoreDataClass.swift */; };
+		57ED18902541B37800151AC8 /* Run+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED188C2541B37800151AC8 /* Run+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,16 +61,17 @@
 		57262EC0253DBE40000CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57262ED9253DC68B000CAA23 /* Core Data and CloudKit Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Core Data and CloudKit Guide.entitlements"; sourceTree = "<group>"; };
 		57262EDB253DC690000CAA23 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		572A7869253F2B1E00C85FC2 /* Run+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataClass.swift"; sourceTree = "<group>"; };
-		572A786A253F2B1E00C85FC2 /* Run+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		572A786B253F2B1E00C85FC2 /* Segment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segment+CoreDataClass.swift"; sourceTree = "<group>"; };
-		572A786C253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		572A7889253F2DC600C85FC2 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		572A7891253F2E1D00C85FC2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		572A7896253F2E2800C85FC2 /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
 		573F54D1254065CC00470D24 /* RunTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
 		573F54D62540714900470D24 /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		573F54DB254071D700470D24 /* AddEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditView.swift; sourceTree = "<group>"; };
+		579E0B372541B69F002679BC /* Segment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		579E0B382541B69F002679BC /* Segment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Segment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57ED18812541AEF400151AC8 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		57ED188B2541B37800151AC8 /* Run+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57ED188C2541B37800151AC8 /* Run+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		57262E98253DBE3D000CAA23 /* Core Data and CloudKit Guide */ = {
 			isa = PBXGroup;
 			children = (
+				57ED18802541AEDA00151AC8 /* Extension */,
 				572A7879253F2BA800C85FC2 /* Controller */,
 				572A7878253F2B9D00C85FC2 /* View */,
 				572A7874253F2B2500C85FC2 /* Model */,
@@ -162,10 +165,10 @@
 		572A7874253F2B2500C85FC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				572A7869253F2B1E00C85FC2 /* Run+CoreDataClass.swift */,
-				572A786A253F2B1E00C85FC2 /* Run+CoreDataProperties.swift */,
-				572A786B253F2B1E00C85FC2 /* Segment+CoreDataClass.swift */,
-				572A786C253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift */,
+				579E0B372541B69F002679BC /* Segment+CoreDataClass.swift */,
+				579E0B382541B69F002679BC /* Segment+CoreDataProperties.swift */,
+				57ED188B2541B37800151AC8 /* Run+CoreDataClass.swift */,
+				57ED188C2541B37800151AC8 /* Run+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,14 @@
 				573F54D62540714900470D24 /* AddEditViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		57ED18802541AEDA00151AC8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				57ED18812541AEF400151AC8 /* UITextField.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,19 +333,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				572A788A253F2DC600C85FC2 /* ListingViewController.swift in Sources */,
-				572A786F253F2B1E00C85FC2 /* Segment+CoreDataClass.swift in Sources */,
+				579E0B3A2541B69F002679BC /* Segment+CoreDataProperties.swift in Sources */,
 				57262EA4253DBE3D000CAA23 /* Core_Data_and_CloudKit_Guide.xcdatamodeld in Sources */,
 				572A7892253F2E1D00C85FC2 /* DetailView.swift in Sources */,
-				572A7870253F2B1E00C85FC2 /* Segment+CoreDataProperties.swift in Sources */,
 				57262E9E253DBE3D000CAA23 /* DetailViewController.swift in Sources */,
 				573F54DC254071D700470D24 /* AddEditView.swift in Sources */,
-				572A786D253F2B1E00C85FC2 /* Run+CoreDataClass.swift in Sources */,
-				572A786E253F2B1E00C85FC2 /* Run+CoreDataProperties.swift in Sources */,
 				573F54D72540714900470D24 /* AddEditViewController.swift in Sources */,
 				57262E9A253DBE3D000CAA23 /* AppDelegate.swift in Sources */,
+				579E0B392541B69F002679BC /* Segment+CoreDataClass.swift in Sources */,
+				57ED18822541AEF400151AC8 /* UITextField.swift in Sources */,
 				573F54D2254065CC00470D24 /* RunTableViewCell.swift in Sources */,
 				572A7897253F2E2800C85FC2 /* ListingView.swift in Sources */,
 				57262E9C253DBE3D000CAA23 /* SceneDelegate.swift in Sources */,
+				57ED18902541B37800151AC8 /* Run+CoreDataProperties.swift in Sources */,
+				57ED188F2541B37800151AC8 /* Run+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

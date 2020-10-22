@@ -11,45 +11,51 @@ class AddEditView: UIView {
     
     let gameNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Game Name"
+        label.text = "Nome do jogo"
         return label
     }()
     
     let gameNameTextField: UITextField = {
         let textField = UITextField()
+        textField.underlined()
         return textField
     }()
     
     let categoryLabel: UILabel = {
         let label = UILabel()
-        label.text = "Run Category"
+        label.text = "Categoria da run"
         return label
     }()
     
     let categoryTextField: UITextField = {
         let textField = UITextField()
+        textField.underlined()
         return textField
     }()
     
     let attemptsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Number of Attempts"
+        label.text = "Número de tentativas"
         return label
     }()
     
     let attemptsTextField: UITextField = {
         let textField = UITextField()
+        textField.keyboardType = .numberPad
+        textField.underlined()
         return textField
     }()
     
     let personalBestTimeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Personal Best Time"
+        label.text = "Tempo recorde pessoal (em segundos)"
         return label
     }()
     
     let personalBestTimeTextField: UITextField = {
         let textField = UITextField()
+        textField.keyboardType = .decimalPad
+        textField.underlined()
         return textField
     }()
     
@@ -73,9 +79,9 @@ class AddEditView: UIView {
         addSubview(gameNameLabel)
         gameNameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            gameNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 32),
+            gameNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
             gameNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            gameNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            gameNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -85,7 +91,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             gameNameTextField.topAnchor.constraint(equalTo: gameNameLabel.bottomAnchor, constant: 16),
             gameNameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            gameNameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            gameNameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -95,7 +101,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             categoryLabel.topAnchor.constraint(equalTo: gameNameTextField.bottomAnchor, constant: 16),
             categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            categoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            categoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -105,7 +111,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             categoryTextField.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 16),
             categoryTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            categoryTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            categoryTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -115,7 +121,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             attemptsLabel.topAnchor.constraint(equalTo: categoryTextField.bottomAnchor, constant: 16),
             attemptsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            attemptsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            attemptsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -125,7 +131,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             attemptsTextField.topAnchor.constraint(equalTo: attemptsLabel.bottomAnchor, constant: 16),
             attemptsTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            attemptsTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            attemptsTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -135,7 +141,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             personalBestTimeLabel.topAnchor.constraint(equalTo: attemptsTextField.bottomAnchor, constant: 16),
             personalBestTimeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            personalBestTimeLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            personalBestTimeLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
@@ -145,7 +151,7 @@ class AddEditView: UIView {
         NSLayoutConstraint.activate([
             personalBestTimeTextField.topAnchor.constraint(equalTo: personalBestTimeLabel.bottomAnchor, constant: 16),
             personalBestTimeTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            personalBestTimeTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16)
+            personalBestTimeTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     

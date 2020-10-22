@@ -2,7 +2,7 @@
 //  Segment+CoreDataProperties.swift
 //  Core Data and CloudKit Guide
 //
-//  Created by Rodrigo Matos Aguiar on 20/10/20.
+//  Created by Rodrigo Matos Aguiar on 22/10/20.
 //
 //
 
@@ -16,8 +16,8 @@ extension Segment {
         return NSFetchRequest<Segment>(entityName: "Segment")
     }
 
+    @NSManaged public var bestTime: NSDecimalNumber?
     @NSManaged public var name: String?
-    @NSManaged public var bestTime: Date?
     @NSManaged public var run: Run?
 
 }

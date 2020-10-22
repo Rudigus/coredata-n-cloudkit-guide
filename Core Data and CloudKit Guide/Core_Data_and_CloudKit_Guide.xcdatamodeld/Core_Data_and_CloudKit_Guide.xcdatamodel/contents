@@ -4,11 +4,11 @@
         <attribute name="attempts" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="gameName" optional="YES" attributeType="String"/>
-        <attribute name="personalBestTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="personalBestTime" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <relationship name="segments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Segment" inverseName="run" inverseEntity="Segment"/>
     </entity>
     <entity name="Segment" representedClassName="Segment" syncable="YES">
-        <attribute name="bestTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="bestTime" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="run" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Run" inverseName="segments" inverseEntity="Run"/>
     </entity>

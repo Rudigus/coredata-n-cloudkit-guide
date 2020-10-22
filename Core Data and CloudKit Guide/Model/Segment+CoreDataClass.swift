@@ -2,7 +2,7 @@
 //  Segment+CoreDataClass.swift
 //  Core Data and CloudKit Guide
 //
-//  Created by Rodrigo Matos Aguiar on 20/10/20.
+//  Created by Rodrigo Matos Aguiar on 22/10/20.
 //
 //
 
