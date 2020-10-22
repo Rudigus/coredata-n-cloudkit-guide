@@ -27,6 +27,10 @@ class ListingViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationController()
         setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchRuns()
     }
     
@@ -53,7 +57,7 @@ class ListingViewController: UIViewController {
     }
 
     @objc func addButtonPressed() {
-        let vc = AddEditViewController(context: context)
+        let vc = AddEditViewController(context: context, operationMode: .add)
 //        vc.modalPresentationStyle = .pageSheet
 //        navigationController?.present(vc, animated: true)
         navigationController?.pushViewController(vc, animated: true)
@@ -75,5 +79,23 @@ extension ListingViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = AddEditViewController(context: context, operationMode: .edit, run: dataSource[indexPath.row])
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Deletar") {_,_,_ in
+            let run = self.dataSource[indexPath.row]
+            self.context.delete(run)
+            do {
+                try self.context.save()
+            } catch {
+                print(error)
+            }
+            self.fetchRuns()
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
 }

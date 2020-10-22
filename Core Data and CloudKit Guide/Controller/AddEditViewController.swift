@@ -10,12 +10,20 @@ import CoreData
 
 class AddEditViewController: UIViewController {
     
+    enum OperationMode {
+        case add, edit
+    }
+    
     var addEditView: AddEditView! = nil
     var context: NSManagedObjectContext! = nil
+    var operationMode: OperationMode! = nil
+    var run: Run?
     
-    init(context: NSManagedObjectContext) {
+    init(context: NSManagedObjectContext, operationMode: OperationMode, run: Run? = nil) {
         super.init(nibName: nil, bundle: nil)
         self.context = context
+        self.operationMode = operationMode
+        self.run = run
     }
     
     required init?(coder: NSCoder) {
@@ -27,16 +35,35 @@ class AddEditViewController: UIViewController {
         view = addEditView
         view.backgroundColor = UIColor.white
         setupNavigationBar()
+        preloadInputs()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func preloadInputs() {
+        if operationMode == OperationMode.edit {
+            guard let run = run else {
+                return
+            }
+            addEditView.gameNameTextField.text = run.gameName
+            addEditView.categoryTextField.text = run.category
+            addEditView.attemptsTextField.text = String(run.attempts)
+            addEditView.personalBestTimeTextField.text = run.personalBestTime?.stringValue
+        }
+    }
+    
     func setupNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(cancelButtonPressed))
-        title = "Adicionar Run"
+        
+        if operationMode == OperationMode.add {
+            title = "Adicionar Run"
+        } else {
+            title = "Editar Run"
+        }
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(saveButtonPressed))
     }
     
@@ -59,11 +86,20 @@ class AddEditViewController: UIViewController {
             return
         }
         
-        let run = Run(context: self.context)
-        run.gameName = gameName
-        run.category = category
-        run.attempts = Int64(attempts) ?? 0
-        run.personalBestTime = NSDecimalNumber(string: personalBestTime)
+        if operationMode == OperationMode.add {
+            let run = Run(context: self.context)
+            run.gameName = gameName
+            run.category = category
+            run.attempts = Int64(attempts) ?? 0
+            run.personalBestTime = NSDecimalNumber(string: personalBestTime)
+        } else {
+            if let run = run {
+                run.gameName = gameName
+                run.category = category
+                run.attempts = Int64(attempts) ?? 0
+                run.personalBestTime = NSDecimalNumber(string: personalBestTime)
+            }
+        }
         
         do {
             try self.context.save()
